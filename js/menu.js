@@ -6,24 +6,23 @@ const menu = {
     },
 
     addAllEventLIsteners:function(){
-        console.log('add all listeners')
+
+        let sidenav = document.getElementById("idSidenav");
 
         document.getElementById('openBtn').addEventListener('click', () => {
-            menu.handleOpenNav()
+            menu.handleOpenNav(sidenav)
         });
 
         document.getElementById('closeBtn').addEventListener('click', () => {
-            menu.handleCloseNav()
+            menu.handleCloseNav(sidenav)
         });
     },
 
-    handleOpenNav: function() {
-        let sidenav = document.getElementById("idSidenav");
+    handleOpenNav: function(sidenav) {
         sidenav.classList.add("active");
     },
 
-    handleCloseNav: function() {
-        let sidenav = document.getElementById("idSidenav");
+    handleCloseNav: function(sidenav) {
         sidenav.classList.remove("active");
     },
 
