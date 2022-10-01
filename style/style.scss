@@ -1,0 +1,66 @@
+@use 'vars';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body {
+    margin: vars.$gutterSmall;
+    background-color: vars.$lightGray;
+    font-family: 'Inter';
+    line-height: vars.$gutterBig;
+}
+
+/* Sidenav menu */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: vars.$primaryGray;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+  }
+  
+  .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Sidenav menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: vars.$lightGray;
+    display: block;
+    transition:.2s;
+  }
+  
+  .sidenav a:hover {
+    color: vars.$darkBlue;
+    transition: .5s;
+  }
+  
+  /* Active class change left position to 0
+     and display sidebar */
+  .sidenav.active {
+    left: 0;
+  }
+  
+  /* Close btn */
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  .burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: vars.$darkBlue;
+    margin: 6px 0;
+  }
