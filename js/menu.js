@@ -8,13 +8,13 @@ const menu = {
     addAllEventLIsteners:function(){
         console.log('add all listeners')
 
-        document.getElementById('openBtn').addEventListener('click', (event => {
+        document.getElementById('openBtn').addEventListener('click', () => {
             menu.handleOpenNav()
-        }));
+        });
 
-        document.getElementById('closeBtn').addEventListener('click', (event => {
+        document.getElementById('closeBtn').addEventListener('click', () => {
             menu.handleCloseNav()
-        }));
+        });
     },
 
     handleOpenNav: function() {
